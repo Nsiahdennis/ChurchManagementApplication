@@ -18,7 +18,7 @@ import jakarta.persistence.Id;
         @GeneratedValue(strategy = GenerationType.IDENTITY)
 
         @Column(name = "id")
-        private Long id;
+        private Integer id;
 
         @Column(name = "type")
         private String type;
@@ -30,6 +30,10 @@ import jakarta.persistence.Id;
 
         }
 
+        public static Event createEvent(Integer id, String name, String type) {
+            return new Event(id, name, type);
+        }
+
 
         public String getType() {
             return type;
@@ -39,11 +43,11 @@ import jakarta.persistence.Id;
             this.type = type;
         }
 
-        public Long getId() {
+        public Integer getId() {
             return id;
         }
 
-        public void setId(Long id) {
+        public void setId(Integer id) {
             this.id = id;
         }
 
@@ -56,7 +60,7 @@ import jakarta.persistence.Id;
         }
 
 
-        public Event(Long id, String name, String type) {
+        private Event(Integer id, String name, String type) {
             this.id = id;
             this.name = name;
             this.type = type;
