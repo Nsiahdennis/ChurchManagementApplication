@@ -1,7 +1,6 @@
 package com.teamovercomers.Church.Management.Application.service;
 
 import com.teamovercomers.Church.Management.Application.entity.Event;
-import com.teamovercomers.Church.Management.Application.entity.Member;
 import com.teamovercomers.Church.Management.Application.repository.EventRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
