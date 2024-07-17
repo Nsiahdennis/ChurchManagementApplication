@@ -27,7 +27,6 @@ public class ChurchService {
 
     public Church updateChurch(Integer id, Church church) {
         Church existingChurch = churchRepository.findById(id).orElse(null);
-        System.out.println(existingChurch);
         if (existingChurch != null) {
             existingChurch.setChurch_name(church.getChurch_name());
             existingChurch.setLocation(church.getLocation());
