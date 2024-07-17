@@ -23,11 +23,13 @@ public class Church_Controller {
 
     @GetMapping("/{id}")
     public Church getChurchById(@PathVariable Integer id) {
+
         return churchService.getChurchById(id);
     }
 
     @PostMapping
     public Church createChurch(@RequestBody Church church) {
+
         return churchService.createChurch(church);
     }
     @PutMapping("/{id}")

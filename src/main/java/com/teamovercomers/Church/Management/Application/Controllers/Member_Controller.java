@@ -23,11 +23,13 @@ public class Member_Controller {
 
     @GetMapping("/{id}")
     public Member getMemberById(@PathVariable Integer id) {
+
         return memberService.getMemberById(id);
     }
 
     @PostMapping
-    public Member createChurch(@RequestBody Member member) {
+    public Member createMember(@RequestBody Member member) {
+
         return memberService.createMember(member);
     }
 
@@ -37,7 +39,7 @@ public class Member_Controller {
     }
 
     @DeleteMapping("/{id}")
-    public Church DeleteChurch(@PathVariable Integer id) {
+    public Church DeleteMember(@PathVariable Integer id) {
         memberService.deleteMember(id);
         return null;
     }
