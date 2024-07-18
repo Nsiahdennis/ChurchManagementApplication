@@ -36,6 +36,7 @@ public class MemberService {
         return null;
 }
     public void deleteMember(Integer id){
+
         memberRepository.deleteById(Math.toIntExact(id));
     }
 }
