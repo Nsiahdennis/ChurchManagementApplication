@@ -27,7 +27,7 @@ public class Church_Controller {
         return churchService.getChurchById(id);
     }
 
-    @PostMapping
+    @PostMapping("/{id}")
     public Church createChurch(@RequestBody Church church) {
 
         return churchService.createChurch(church);
