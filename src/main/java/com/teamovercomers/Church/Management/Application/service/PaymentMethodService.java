@@ -25,7 +25,7 @@ public class PaymentMethodService {
     public PaymentMethod savePaymentMethod(PaymentMethod paymentMethod) {
         return paymentMethodRepository.save(paymentMethod);
     }
-    public void deletePaymentMethod(Integer id) {
+    public void deletePaymentMethod(Long id) {
         paymentMethodRepository.deleteById(id);
     }
 

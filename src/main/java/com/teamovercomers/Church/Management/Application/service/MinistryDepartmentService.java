@@ -14,7 +14,7 @@ public class MinistryDepartmentService {
     @Autowired
     private MinistryDepartmentRepository ministryDepartmentRepository;
 
-    private List<MinistryDepartment> getAllMinistryDepartment() {
+    public List<MinistryDepartment> getAllMinistryDepartment() {
         return ministryDepartmentRepository.findAll();
     }
 
