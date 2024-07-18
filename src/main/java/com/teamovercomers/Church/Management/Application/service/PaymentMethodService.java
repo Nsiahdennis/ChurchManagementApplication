@@ -29,4 +29,11 @@ public class PaymentMethodService {
         paymentMethodRepository.deleteById(id);
     }
 
+    public PaymentMethod createPaymentMethod(PaymentMethod paymentMethod) {
+        return paymentMethod;
+    }
+
+    public PaymentMethod updatePaymentMethod(Long id, PaymentMethod paymentMethod) {
+        return paymentMethod;
+    }
 }
