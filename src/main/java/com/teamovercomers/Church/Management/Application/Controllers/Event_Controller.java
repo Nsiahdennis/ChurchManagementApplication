@@ -23,7 +23,7 @@ public class Event_Controller {
     public Event getEventById(@PathVariable Integer id) {
         return eventService.getById(id);
     }
-    @PostMapping
+    @PostMapping("/{id}")
     public Event createChurch(@RequestBody Event event) {
         return eventService.createEvent(event);
 

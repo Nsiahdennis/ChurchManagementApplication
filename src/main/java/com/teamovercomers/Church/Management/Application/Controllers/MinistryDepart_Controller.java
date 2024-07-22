@@ -36,11 +36,13 @@ public class MinistryDepart_Controller {
     @PostMapping("/{id}")
     public MinistryDepartment createMinistryDepartment(@RequestBody MinistryDepartment ministryDepartment) {
 
+
         return ministryDepartmentService.createMinistryDepartment(ministryDepartment);
     }
 
     @PutMapping("/{id}")
     public MinistryDepartment updateMinistryDepartment(@PathVariable Long id, @RequestBody MinistryDepartment MinistryDepartment) {
+
         return ministryDepartmentService.updateMinistryDepartment(id, MinistryDepartment);
 
     }
@@ -52,7 +54,8 @@ public class MinistryDepart_Controller {
     }
 
     @DeleteMapping("/{id}")
-    public MinistryDepartment DeleteMinistryDepartment(@PathVariable Long id) {
+    public MinistryDepartment
+    DeleteMinistryDepartment(@PathVariable Long id) {
         ministryDepartmentService.deleteMinistryDepartment(id);
         return null;
     }

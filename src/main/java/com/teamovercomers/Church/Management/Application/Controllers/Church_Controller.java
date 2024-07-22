@@ -3,13 +3,17 @@ package com.teamovercomers.Church.Management.Application.Controllers;
 
 import com.teamovercomers.Church.Management.Application.entity.Church;
 import com.teamovercomers.Church.Management.Application.service.ChurchService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/churches")
+@AllArgsConstructor
+
 public class Church_Controller {
     @Autowired
 
@@ -27,16 +31,16 @@ public class Church_Controller {
         return churchService.getChurchById(id);
     }
 
-    @PostMapping("/{id}")
+    @PostMapping
     public Church createChurch(@RequestBody Church church) {
 
         return churchService.createChurch(church);
     }
+//    @PutMapping("/{id}")
+//    public Church updateChurch(@PathVariable Integer id, @RequestBody Church church){
+//        return churchService.updateChurch(id, church);
+//    }
     @PutMapping("/{id}")
-    public Church updateChurch(@PathVariable Integer id, @RequestBody Church Church){
-        return churchService.updateChurch(id, Church);
-    }
-    @PatchMapping("/{id}")
     public Church updatesChurch(@PathVariable Integer id, @RequestBody Church Church){
         return churchService.updateChurch(id, Church);
     }

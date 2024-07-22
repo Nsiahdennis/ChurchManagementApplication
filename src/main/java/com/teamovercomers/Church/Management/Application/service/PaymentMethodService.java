@@ -20,7 +20,7 @@ public class PaymentMethodService {
     }
 
     public PaymentMethod getPaymentMethodById(Long id) {
-        return PaymentMethodRepository.findById(id).orElse(null);
+        return paymentMethodRepository.findById(id).orElse(null);
     }
     public PaymentMethod savePaymentMethod(PaymentMethod paymentMethod) {
         return paymentMethodRepository.save(paymentMethod);

@@ -21,17 +21,26 @@ public class ChurchService {
         return churchRepository.findById(id).orElse(null);
     }
 
-    public Church createChurch(Church church) {
+    public Church createChurch(Church church_new){
+        Church church = new Church();
+        church.setId(church_new.getId());
+        church.setChurch_name(church_new.getChurch_name());
+        church.setAddress(church_new.getAddress());
+        church.setEmail(church_new.getEmail());
+        church.setLocation(church_new.getLocation());
         return churchRepository.save(church);
     }
 
     public Church updateChurch(Integer id, Church church) {
         Church existingChurch = churchRepository.findById(id).orElse(null);
         if (existingChurch != null) {
-            existingChurch.setChurch_name(church.getChurch_name());
             existingChurch.setLocation(church.getLocation());
-            existingChurch.setEmail(existingChurch.getEmail());
-            existingChurch.setAddress(existingChurch.getAddress());
+            if(church.getChurch_name() !=null){
+                existingChurch.setChurch_name(church.getChurch_name());
+
+            }
+           existingChurch.setEmail(church.getEmail());
+            existingChurch.setAddress(church.getAddress());
             return churchRepository.save(existingChurch);
         }
         return null;
